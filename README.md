@@ -72,3 +72,82 @@
    * Merge before lunch at end of work day at least, then commit if you do something outside of work hours
   * How will you communicate that it’s time to merge?
    * We have 3 meeting times that we've agreed upon, if we need merges, they'll happen at lunchtime meeting and end of workday meeting
+  
+### Domain Model
+* Coder Trading Cards
+ * Custom Trading Card
+  * UserName
+  * Pic of User
+  * Background picture of the card
+  * Details about User
+ * Michael Trading Card
+  * Michael
+  * Pic of michael
+  * Background picture of the card
+  * Details about Michael
+ * Zion Trading Card
+  * Zion
+  * Pic of Zion
+  * Background picture of the card
+  * Details about Zion
+ * Lindsey trading card
+  * Lindsey
+  * Pic of lindsey
+  * Background picture of card
+  * Details about lindsey
+ * Jordan Trading Card
+  * Pic of Jordan
+  * Background picture of the card
+  * Details about Jordan
+ * Storm Trading Card
+  * Storm
+  * Pic of Storm
+  * Background picture of the card
+  * Details about Storm
+ * Tyler Trading Card
+  * Tyler
+  * Pic of Tyler
+  * Background picture of the card
+  * Details about Tyler
+ * Curtrick Trading Card
+  * Curtrick
+  * Pic of Curtrick
+  * Background picture of the card
+  * Details about Curtrick
+ * Robert Trading Card
+  * Robert
+  * Pic of Robert
+  * Background picture of the card
+  * Details about robert
+ * Lizzy Trading Card
+  * Lizzy
+  * Pic of Lizzy
+  * background picture of the card
+  * Details about Lizzy
+
+## Database Schema Diagram
+* Does a single item in your database “belong to” just one other item in your database? For example, a person has one passport, and a passport belongs to a single person.
+ * Name, pick, and details belong to every trading card, but is unique to the card created
+* Does an item in your database “belong to” multiple other items in your database? For example, a house has many residents, and each resident has one primary house.
+ * no
+* Do many items in your database relate to many other items in your database? For example, a band has many musicians, and a musician can be in many bands.
+ * no
+* Also, include for each separate collection:
+ * The name of each property stored in the collection.
+ * The required data type.
+ * An indication if this collection is associated with another collection.
+
+* Coder Trading Cards
+ * A Coder
+ * Name
+ * Image
+ * background picture of the card
+ * Details/Stat
+ 
+{ 
+“Coder Trading Cards” : [
+	“Coder A” : [“name”: “coder a”, “image”:”./images/image.jpg”, “details”:”lorem ipsum filler text”],
+	“Coder B”: [“name”: “coder b”, “image”:”./images/image.jpg”, “details”:”lorem ipsum filler text”]
+ ]
+}
+
