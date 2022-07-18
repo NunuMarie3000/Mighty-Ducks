@@ -7,7 +7,7 @@
 * What are the key strengths of each person on the team?
  * Curtrick-HTML CSS PRO, JS, it is what it is
  * Lindsey-HTML CSS HERO, JS, it is what it is
- * Storm-We gonna turn in something cute and funcitonal
+ * Storm-We gonna turn in something cute and functional
 * How can you best utilize these strengths in the execution of your project?
  * HTML anc CSS is gonna be on point
 * In which professional competencies do you each want to develop greater strength?
