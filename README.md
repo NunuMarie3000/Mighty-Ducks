@@ -3,7 +3,7 @@
 # Carousel of Coders by Mighty Ducks
 * Trading card style cards with classmates and instructors and stats on them, animated with css and javascript 
 
-## Cooperation Plan
+### Cooperation Plan
 * What are the key strengths of each person on the team?
  * Curtrick-HTML CSS PRO, JS, it is what it is
  * Lindsey-HTML CSS HERO, JS, it is what it is
@@ -17,7 +17,7 @@
 * Knowing that every person in your team needs to understand all aspects of the project, how do you plan to approach the day-to-day work?
  * regular check ins and meetings, conversations, clear and open communication
 
-## Conflict Plan
+### Conflict Plan
 * What will be your group’s process to resolve conflict, when it arises?
  * talking it out, communicating
 * What will your team do if one person is taking over the project and not letting the other members contribute?
@@ -29,7 +29,7 @@
 * How and when will you escalate the conflict if your resolution attempts are unsuccessful?
  * If communication doesn't work, and we can't come to an amicable understanding, instructors may be called in...but only after a brief break for us all to calm down and come back together
 
-## Communication Plan
+### Communication Plan
 * What hours will you be available to communicate?
  * Curtrick: all day til midnight
  * Storm: til around 10pm
@@ -49,14 +49,14 @@
  * Frequent communication, no judgement, this is a learning environment
  * If you see something, say something, speak up if you have an issue
 
-## Work Plan
+### Work Plan
 * How you will identify tasks, assign tasks, know when they are complete, and manage work in general?
  * Frequent meetings perhaps before/after breaks, if task is complete, meeting so we can pr and merge, and rework, etc. Meetings beginning, middle, and end of day to reassign tasks, etc. 
 * What project management tool will be used?
  * Todo list at the beginning of the day to work through
  * Github
 
-## Git Process
+### Git Process
 * What components of your project will live on GitHub?
  * all of it?
 * How will you share the repository with your teammates?
