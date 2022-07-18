@@ -1,5 +1,8 @@
 # Code 201 Team Project by Storm, Curtrick, and Lindsey
 
+#Carousel of Coders by Mighty Ducks
+# Trading card style cards with classmates and instructors and stats on them, animated with css and javascript 
+
 ## Cooperation Plan
 * What are the key strengths of each person on the team?
  * Curtrick-HTML CSS PRO, JS, it is what it is
