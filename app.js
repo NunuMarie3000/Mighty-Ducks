@@ -9,5 +9,5 @@ let getJsonCards = fetch('./cards.json').then((response)=>{
 }).then(data =>{
     //do something with this json data eventually
 }).catch((error)=>{
-    console.log()
+    console.log('You have an error', error);
 });
