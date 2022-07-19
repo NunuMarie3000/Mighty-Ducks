@@ -8,6 +8,10 @@ body {
     background: linear-gradient(to right,#ff0000, #ffd500);
 }
 
+body{
+    background: linear-gradient(#ff0000, #ffd500);
+}
+
 h1 {
     font-family: 'Bungee Shade', cursive;
     font-size: 30px;
@@ -247,7 +251,11 @@ h1 {
     font-size: 40px;
 }
 
-.fa-solid:hover {
+.fa-solid{
+    color: rgba(69, 69, 69, 0.55);
+    font-size: 40px;
+}
+.fa-solid:hover{
     cursor: pointer;
     color: black;
 }
