@@ -1,36 +1,45 @@
-* {
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
 
 body {
     background: linear-gradient(to right, rgb(255, 0, 0), rgb(255, 213, 0));
 }
 
 h1 {
+body{
+    background: linear-gradient(#ff0000, #ffd500);
+}
+
+h1{
     font-family: 'Bungee Shade', cursive;
     font-size: 30px;
 }
 
-.main-container {
+
+.main-container{
     display: flex;
     justify-content: space-evenly;
 }
 
-.sub-container {
+
+.sub-container{
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-.forward-backward-trading-card-holder-container {
+.forward-backward-trading-card-holder-container{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-/* .trading-card-container{
+/*
+.trading-card-container{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,6 +172,10 @@ h1 {
 
 
 .top-layer {
+
+}
+
+.top-layer{
     display: flex;
     align-items: center;
     gap: 30px;
@@ -171,7 +184,7 @@ h1 {
     width: 270px;
 }
 
-.top-layer>img {
+.top-layer > img{
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -180,7 +193,7 @@ h1 {
     border-color: #ffd500;
 }
 
-.top-layer>div {
+.top-layer > div{
     border-style: solid;
     border-width: 2px;
     border-color: #ffd500;
@@ -194,9 +207,18 @@ h1 {
 }
 
 .fa-solid:hover {
+
+}
+
+.fa-solid{
+    color: rgba(69, 69, 69, 0.55);
+    font-size: 40px;
+}
+.fa-solid:hover{
     cursor: pointer;
     color: black;
 }
+
 
 .middle-layer {
     margin-bottom: 10px;
@@ -204,6 +226,13 @@ h1 {
 }
 
 .middle-layer>img {
+
+}
+.middle-layer{
+    margin-bottom: 10px;
+    width: 270px;
+}
+.middle-layer > img{
     width: 270px;
     height: 200px;
     border-style: solid;
@@ -211,7 +240,7 @@ h1 {
     border-color: #ffd500;
 }
 
-.bottom-layer {
+.bottom-layer{
     border-style: solid;
     border-width: 5px;
     border-color: #ffd500;
@@ -220,6 +249,12 @@ h1 {
 }
 
 .bottom-layer>div {
+    text-align: center;
+    padding: 5px 2px;
+    color: #fff;
+}
+
+.bottom-layer > div{
     text-align: center;
     padding: 5px 2px;
     color: #fff;
