@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,12 @@
     <script src="https://kit.fontawesome.com/3a9f60b233.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Home</title>
 </head>
+
 <body>
     <!--main container that'll hold everything in our application
     this container will also be where we have our front and back arrow buttons/icons-->
@@ -37,7 +40,7 @@
                     <div class="top-layer">
                         <img src="https://dummyimage.com/200x200/000/fff" alt="" class="logo-pic">
                         <div class="username-box">
-                            <h3>Storm O'Bryant</h3>
+                            <h3 id="userName">Storm O'Bryant</h3>
                         </div>
                     </div>
 
@@ -47,8 +50,16 @@
 
                     <div class="bottom-layer">
                         <div class="details-container">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure at accusantium, sunt quas nemo, consectetur, corrupti ipsa neque alias doloremque fugit ullam? Beatae, adipisci consequuntur. Molestiae cum recusandae labore non!</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure at accusantium, sunt quas
+                                nemo, consectetur, corrupti ipsa neque alias doloremque fugit ullam? Beatae, adipisci
+                                consequuntur. Molestiae cum recusandae labore non!</p>
                         </div>
+                    </div>
+                </div>
+                <div class="back-card-container">
+                    <div class="back-middle">
+                        <div class="card-name">Carousel of Coders</div>
+                        <img src="./img/code_crew.png" alt="" class="coder-pic">
                     </div>
                 </div>
 
@@ -56,13 +67,21 @@
                 <div class="forward-container">
                     <i class="fa-solid fa-forward"></i>
                 </div>
+                <!-- delete icon -->
+                <div class="delete">
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <!-- download icon -->
+                <div class="download">
+                    <i class="fa-solid fa-download"></i>
+                </div>
             </div>
-
             <footer>&copy; Mighty Ducks, 2022</footer>
 
         </div>
 
     </div>
-
+<script src="./app.js"></script>
 </body>
+
 </html>
