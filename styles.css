@@ -1,2 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body{
+    background: linear-gradient(#ff0000, #ffd500);
+}
 
+h1{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 30px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sub-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.forward-backward-trading-card-holder-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.trading-card-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: double;
+    border-color: #ffd500;
+    border-width: 20px;
+    border-radius: 5%;
+    background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%), linear-gradient(127deg, rgba(0,255,0,.8), rgba(0,255,0,0) 70.71%), linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+    box-shadow: 7px 9px rgba(0, 0, 0, 0.466);
+}
+
+.top-layer{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 270px;
+}
+.top-layer > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffd500;
+}
+.top-layer > div{
+    border-style: solid;
+    border-width: 2px;
+    border-color: #ffd500;
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+.fa-solid{
+    color: rgba(69, 69, 69, 0.55);
+    font-size: 40px;
+}
+.fa-solid:hover{
+    cursor: pointer;
+    color: black;
+}
+
+.middle-layer{
+    margin-bottom: 10px;
+    width: 270px;
+}
+.middle-layer > img{
+    width: 270px;
+    height: 200px;
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffd500;
+}
+
+.bottom-layer{
+    border-style: solid;
+    border-width: 5px;
+    border-color: #ffd500;
+    margin: auto 20px 10px 20px;
+    width: 270px;
+}
+.bottom-layer > div{
+    text-align: center;
+    padding: 5px 2px;
+    color: #fff;
+}
