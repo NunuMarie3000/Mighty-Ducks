@@ -2,73 +2,64 @@
     "coderCards": [
         {
             "name": "User Name",
-            "image": "Pic of user",
+            "image": "Pic of user", 
             "background": "background picture",
             "stats": ["level: ", "XP: ", "Powers: "]
         },
 
         {
             "name": "Michael",
-            "image": "Pic of Michael",
-            "background": "background picture",
+            "image": "./images/michael.png",
             "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript" ]
         },
 
         {
             "name": "Zion",
-            "image": "Pic of Zion",
-            "background": "background picture",
+            "image": "./images/zion.png",
             "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript" ]
         },
 
         {
             "name": "Lindsey",
-            "image": "Pic of Lindsey",
-            "background": "background picture",
+            "image": "./images/lindsey.jpg",
             "stats": ["level: intermediate", "XP: 40", "Powers: HTML, CSS, Javascript"]
         },
 
         {
             "name": "Jordan",
-            "image": "Pic of Jordan",
-            "background": "background picture",
-            "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript"]
+            "image": "./images/jordan.jpg",
+            "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript, Python"]
         },
 
         {
             "name": "Storm",
-            "image": "Pic of Storm",
-            "background": "background picture",
+            "image": "./images/storm-img.png",
             "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript"]
         },
 
         {
             "name": "Tyler",
-            "image": "Pic of Tyler",
-            "background": "background picture",
+            "image": "./images/tyler.jpg",
             "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript" ]
         },
 
         {
             "name": "Curtrick",
-            "image": "Pic of Curtrick",
-            "background": "background picture",
+            "image": "./images/curtrick.png",
             "stats": ["level: intermediate", "XP: ", "Powers: HTML, CSS, Javascript"]
         },
 
         {
             "name": "Robert",
-            "image": "Pic of Robert",
-            "background": "background picture",
+            "image": "./images/robert.jpg",
             "stats": ["level: expert", "XP: 140", "Powers: HTML, CSS, Javascript"]
         },
 
         {
             "name": "Lizzy",
-            "image": "Pic of Lizzy",
-            "background": "background picture",
+            "image": "./images/lizzy.jpg",
             "stats": ["level: expert", "XP: ", "Powers: HTML, CSS, Javascript"]
         }
 
     ]
-}
+} 
