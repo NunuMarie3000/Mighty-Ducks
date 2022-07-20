@@ -332,10 +332,7 @@ h1 {
 }
 
 form>div>span {
-    position: fixed;
     cursor: pointer;
-    top: 110px;
-    right: 360px; 
     font-size: 25px;
 }
 
