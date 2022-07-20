@@ -36,6 +36,13 @@ h1 {
     justify-content: space-evenly;
 }
 
+.id-container{
+    margin-left: auto;
+    padding: 2px;
+    font-family: 'Bungee', cursive;
+    font-size: 14px;
+}
+
 /*
 .trading-card-container{
     display: flex;
@@ -122,7 +129,7 @@ h1 {
 }
 
 
-.trading-card-container:before,
+/* .trading-card-container:before,
 .trading-card-container:after {
     content: "";
     position:absolute;
@@ -134,9 +141,9 @@ h1 {
     opacity: .5;
     mix-blend-mode: color-dodge;
     transition: all .33s ease;
-}
+} */
 
-.trading-card-container:before {
+/* .trading-card-container:before {
     background-position: 5%;
     background-size: 5%;
     background-image: linear-gradient(115deg,
@@ -149,9 +156,9 @@ h1 {
     opacity: .5;
     filter: brightness(.5) contrast(1);
     z-index: 1;
-}
+} */
 
-.trading-card-container:after {
+/* .trading-card-container:after {
     opacity: 1;
     background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
         url("https://assets.codepen.io/13471/holo.png"),
@@ -165,14 +172,14 @@ h1 {
     mix-blend-mode: color-dodge;
     opacity: .75;
 
-}
+} */
 
-.trading-card-container.active:after,
+/* .trading-card-container.active:after,
 .trading-card-container:hover:after {
     filter: brightness(1) contrast(1);
     
     opacity: 1;
-}
+} */
 
 .trading-card-container.active,
 .trading-card-container:hover {
@@ -180,7 +187,7 @@ h1 {
     transition: box-shadow 0.1s ease-out;
 }
 
-.trading-card-container.active:before,
+/* .trading-card-container.active:before,
 .trading-card-container:hover:before {
     animation: none;
     background-image: linear-gradient(110deg,
@@ -193,7 +200,7 @@ h1 {
     opacity: .88;
     filter: brightness(.66) contrast(1.33);
     transition: none;
-}
+} */
 
 .trading-card-container.active:before,
 .trading-card-container:hover:before,
@@ -234,6 +241,7 @@ h1 {
     border-style: solid;
     border-width: 2px;
     border-color: #ffd500;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .top-layer>div {
@@ -321,4 +329,25 @@ h1 {
 .card-name{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin-top: 25%;
+}
+
+/* form container, added some basic styles, but set its top to -600px so you can't see it, but when it has the active class applied to it, it'll use that .7second ease transition to slide down into view */
+#form-container{
+    position: fixed;
+    background-color: rgba(240, 248, 255);
+    padding: 10px 20px;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 10px;
+    transition: .7s ease;
+    top: -600px;
+}
+#form-container.active{
+   top: 100px;
+}
+#form-container > form > div > h2{
+    font-family: 'Bungee Shade', cursive;
+    font-size: 20px;
 }

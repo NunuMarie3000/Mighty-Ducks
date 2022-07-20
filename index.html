@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- font awesome so we have access to icons from font awesome library -->
     <script src="https://kit.fontawesome.com/3a9f60b233.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
@@ -20,6 +21,59 @@
     this container will also be where we have our front and back arrow buttons/icons-->
     <div class="main-container">
 
+        <!-- create a form here that shows up when the user clicks the add button -->
+        <div id="form-container">
+            <form id="add-new-coder-form" action="./app.js" method="get">
+                <div class="greetings-container">
+                    <h2>Add Your Own Coder Trading Card!</h2>
+                </div>
+
+                <div class="fname-input-container">
+                    <label for="add-fname">First Name: </label><br>
+                    <input id="add-fname" type="text" name="add-fname" required>
+                </div><br>
+
+                <div class="lname-input-container">
+                    <label for="add-lname">Last Name: </label><br>
+                    <input id="add-lname" type="text" name="add-lname" required>
+                </div><br>
+
+                <div class="image-input-container">
+                    <label for="add-image"></label><br>
+                    <input id="add-image" type="file" name="add-image" required>
+                </div><br>
+
+                <div class="level-input-container">
+                    <label for="level">Level:</label><br>
+                    <select name="level" id="level" required>
+                        <option value="beginner">Beginner</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="expert">Expert</option>
+                    </select>    
+                </div><br>
+
+                <div class="xp-input-container">
+                    <label for="add-xp">XP: </label><br>
+                    <input id="add-xp" type="number" name="add-xp" required>
+                </div><br>
+
+                <div class="powers-input-container">
+                    <label for="powers">Powers: </label>
+                    <input type="text" id="powers" name="powers" required>
+                </div><br>
+
+                <div class="details-input-container">
+                    <label for="add-details">Details: </label>
+                    <input type="text" id="add-details" name="add-details" required><br>
+                </div><br>
+
+                <div class="submit-container">
+                    <input type="submit" name="submit" id="submit-button">
+                </div>
+
+            </form>
+        </div>
+
         <!--this container will be where our trading card, title, and footer will live-->
         <div class="sub-container">
 
@@ -32,27 +86,29 @@
 
                 <!-- back icon -->
                 <div class="backward-container">
-                    <i class="fa-solid fa-backward"></i>
+                    <i id="back-button" class="fa-solid fa-backward"></i>
                 </div>
 
                 <!-- trading card container will be our trading card -->
-                <div class="trading-card-container">
+                <div id="trading-card" class="trading-card-container">
+                    <div class="id-container">
+                        <span id="id-number">0</span>
+                    </div>
                     <div class="top-layer">
-                        <img src="https://dummyimage.com/200x200/000/fff" alt="" class="logo-pic">
+                        <img src='./img/code_crew.png' alt="" class="logo-pic">
                         <div class="username-box">
                             <h3 id="userName">Storm O'Bryant</h3>
                         </div>
                     </div>
 
                     <div class="middle-layer">
-                        <img src="https://dummyimage.com/200x200/000/fff" alt="" class="coder-pic">
+                        <img id="coder-pic" src="" alt="" class="coder-pic">
                     </div>
 
                     <div class="bottom-layer">
                         <div class="details-container">
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure at accusantium, sunt quas
-                                nemo, consectetur, corrupti ipsa neque alias doloremque fugit ullam? Beatae, adipisci
-                                consequuntur. Molestiae cum recusandae labore non!</p>
+                            <p id="stats">Stats: </p>
+                            <p id="details">I love Coding!</p>
                         </div>
                     </div>
                 </div>
@@ -65,17 +121,24 @@
 
                 <!-- forward icon -->
                 <div class="forward-container">
-                    <i class="fa-solid fa-forward"></i>
+                    <i id="skip-button" class="fa-solid fa-forward"></i>
                 </div>
                 <!-- delete icon -->
                 <div class="delete">
-                    <i class="fa-solid fa-trash"></i>
+                    <i id="delete-button" class="fa-solid fa-trash"></i>
                 </div>
                 <!-- download icon -->
                 <div class="download">
-                    <i class="fa-solid fa-download"></i>
+                    <i id="download-button" class="fa-solid fa-download"></i>
+                </div>
+                <!-- add icon -->
+                <div class="add">
+                    <i id="add-button" class="fa-solid fa-plus"></i>
                 </div>
             </div>
+
+            <div id="output"></div>
+
             <footer>&copy; Mighty Ducks, 2022</footer>
 
         </div>
