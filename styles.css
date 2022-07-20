@@ -340,6 +340,11 @@ h1 {
 
 }
 
+
+small {
+    font: sans-serif; 
+}
+
 /* Card Flip */
 .flip-card {
     background-color: transparent;
@@ -374,3 +379,4 @@ h1 {
     transform: rotateY(180deg);
 }
 /* End of Card Flip */
+
