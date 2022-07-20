@@ -54,6 +54,9 @@ let skipThroughCards = ()=>{
     //set currentCoderCard to the coderCardsArray[with the index value of whatever the index counter is on at the moment]
     let currentCoderCard = coderCardsArray[counter];
 
+    // if(counter === 1){
+    //     counter = 1;
+    // }
     //if the we're at the end of the array, set indexcounter to 0 so we loop through again
     if(counter === coderCardsArray.length){
         counter = 0;
@@ -63,8 +66,6 @@ let skipThroughCards = ()=>{
     //add 1 to the index counter, moving on to the next codercard object in the coderCardsArray
     //this will be done at the end of this function so it populates then adds whenever i call it
     counter++;
-    console.log(coderCardsArray);
-    console.log(coderCardsArray.length);
 }
 
 let rewindThroughCards = ()=>{
@@ -77,25 +78,15 @@ let rewindThroughCards = ()=>{
     }
 
     populate(currentCoderCard);
-    console.log(coderCardsArray);
-    console.log(coderCardsArray.length);
 }
 
 //we can use the html2canvas method to take a screenshot of a div
 let downloadCards = ()=>{
     // Use the html2canvas function to take a screenshot and append it to the output div
-    html2canvas(tradingCard).then((canvas)=>{
+    html2canvas(document.getElementById('flip-card-back')).then((canvas)=>{
         document.getElementById('output').appendChild(canvas);
     });
 };
-
-//function that takes information from previous function as parameters
-//use that information to create new instance of class, then pass it into the coderCardArray
-//i want to save all coder cards created with constructor class to local storage
-
-
-//check if the array is empty, if it is, get array items from local storage, parse them, then push them to array
-
 
 //class
 class coderCards {
@@ -110,17 +101,21 @@ class coderCards {
         setTimeout(()=>{
             coderCardsArray.push(this);
             newlyCreatedCoderCardsArray.push(this);
-            console.log(newlyCreatedCoderCardsArray);
-            if(!localStorage.key('newCards')){
+            if (!localStorage.key('newCards')){
                 localStorage.setItem('newCards', `${JSON.stringify(newlyCreatedCoderCardsArray)}`);
             }
-            let storedCards = JSON.parse(localStorage.getItem('newCards'));
-            newlyCreatedCoderCardsArray = [];
-            storedCards.forEach(obj => {
-                newlyCreatedCoderCardsArray.push(obj);
-            });
-            localStorage.setItem('newCards', `${JSON.stringify(newlyCreatedCoderCardsArray)}`);
-            
+            if(localStorage.key('newCards')){
+                let storedCards = JSON.parse(localStorage.getItem('newCards'));
+                console.log(storedCards);
+                console.log(newlyCreatedCoderCardsArray);
+                newlyCreatedCoderCardsArray = [];
+                console.log(newlyCreatedCoderCardsArray);
+                storedCards.forEach(obj => {
+                    newlyCreatedCoderCardsArray.push(obj);
+                });
+                console.log(newlyCreatedCoderCardsArray);
+                localStorage.setItem('newCards', `${JSON.stringify(newlyCreatedCoderCardsArray)}`);
+            }
         }, 50);
     }
 }
@@ -129,15 +124,21 @@ class coderCards {
 let getCoderCardsFromLocalsStorage = ()=>{
     let localStorageCards = JSON.parse(localStorage.getItem('newCards'));
     localStorageCards.forEach(item =>{
+        newlyCreatedCoderCardsArray.push(item);
         coderCardsArray.push(item);
     });
 }
-setTimeout(getCoderCardsFromLocalsStorage, 50);
+setTimeout(()=>{
+    if(!localStorage.key('newCards')){
+        console.log('nothing in local storage');
+    }else{
+        getCoderCardsFromLocalsStorage();
+    }
+}, 50);
 
 let newCoderForm = document.getElementById('add-new-coder-form');
 //need function that gets information when form is submitted then creates a new instance of coderCards with the data
 let createNewCoderCard = ()=>{
-    let newCoderCardCounter = 0;
     let fName = document.getElementById('add-fname').value;
     let lName = document.getElementById('add-lname').value;
     let image = document.getElementById('add-image').value;
@@ -147,7 +148,6 @@ let createNewCoderCard = ()=>{
     let details = document.getElementById('add-details').value;
 
     new coderCards(fName, lName, image, level, xp, powers, details);
-    newCoderCardCounter++;
 }
 
 newCoderForm.addEventListener('submit', (e)=>{
@@ -167,6 +167,14 @@ addButton.addEventListener('click', ()=>{
 //     console.log(newlyCreatedCoderCardsArray);
 //     populate(newlyCreatedCoderCardsArray);
 // });
+
+//add event listener to backofcard and front of card to flip when clicked
+let flipCardInner = document.getElementById('flip-card-inner');
+let backCardContainer = document.getElementById('back-card-container');
+let flip = ()=>{flipCardInner.classList.toggle('flipme');}
+
+tradingCard.addEventListener('click', flip);
+backCardContainer.addEventListener('click', flip);
 
 forwardButton.addEventListener('click', skipThroughCards);
 

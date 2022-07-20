@@ -128,7 +128,7 @@ h1 {
             transparent 100%);
     opacity: .5;
     filter: brightness(.5) contrast(1);
-    z-index: 1;
+    z-index: 2;
 }
 
 .trading-card-container:after {
@@ -328,6 +328,7 @@ h1 {
     gap: 10px;
     transition: .7s ease;
     top: -600px;
+    z-index: 1;
 }
 
 #form-container.active {
@@ -359,7 +360,7 @@ small {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card-inner.flipme {
     transform: rotateY(180deg);
 }
 
