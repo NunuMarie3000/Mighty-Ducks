@@ -407,7 +407,8 @@ h1 {
 .fa-solid:hover{
     cursor: pointer;
     color: black;
-=======
+}
+
 /* form container, added some basic styles, but set its top to -600px so you can't see it, but when it has the active class applied to it, it'll use that .7second ease transition to slide down into view */
 #form-container{
     position: fixed;
