@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(to right, #ff0000, #ffd500);
+    background: linear-gradient(135deg, red, blue, lightgreen);
 }
 
 h1 {
@@ -65,11 +65,16 @@ h1 {
     border-color: silver;
     border-width: 20px;
     border-radius: 5%;
-    background-image: linear-gradient(to right,
+    background-image: linear-gradient(265deg,
+            rgb(255, 82, 117),
+            rgb(183, 84, 250),
+            rgb(75, 162, 249),
+            rgb(157, 252, 138));
+    /* background-image: linear-gradient(to bottom,
             rgb(194, 255, 182),
             rgb(255, 163, 182),
             rgb(221, 169, 255),
-            rgb(162, 209, 255));
+            rgb(162, 209, 255)); */
     box-shadow: 7px 9px rgba(0, 0, 0, 0.466);
     @media screen and (min-width: 600px);
     position: relative;
@@ -94,12 +99,13 @@ h1 {
 
 .trading-card-container:hover {
     box-shadow:
-        -20px -20px 30px -25px var(--color1),
-        20px 20px 30px -25px var(--color2),
-        -7px -7px 10px -5px var(--color1),
-        7px 7px 10px -5px var(--color2),
+        -40px -40px 50px -45px var(--color1),
+        40px 40px 50px -45px var(--color2),
+        -14px -14px 20px -10px var(--color1),
+        14px 14px 20px -10px var(--color2),
         0 0 13px 4px rgba(255, 255, 255, 0.3),
         0 55px 35px -20px rgba(0, 0, 0, 0.5);
+
 }
 
 .trading-card-container:before,
@@ -128,7 +134,7 @@ h1 {
             transparent 100%);
     opacity: .5;
     filter: brightness(.5) contrast(1);
-    z-index: 1;
+    z-index: 2;
 }
 
 .trading-card-container:after {
@@ -157,6 +163,7 @@ h1 {
 .trading-card-container:hover {
     animation: none;
     transition: box-shadow 0.1s ease-out;
+
 }
 
 .trading-card-container.active:before,
@@ -232,6 +239,7 @@ h1 {
     width: 270px;
 }
 
+
 .middle-layer>img {
     width: 270px;
     height: 200px;
@@ -251,7 +259,6 @@ h1 {
 .bottom-layer>div {
     text-align: center;
     padding: 5px 2px;
-    color: #fff;
 }
 
 
@@ -266,10 +273,12 @@ h1 {
     border-radius: 5%;
     height: 520px;
     width: 340px;
-    background-color: slateblue;
+    background-image: linear-gradient(85deg, slateblue, rebeccapurple);
     margin-left: 3px;
 }
-
+.back-card-container:hover{
+    cursor: pointer;
+}
 .back-middle {
     margin-bottom: 10px;
     width: 270px;
@@ -296,6 +305,7 @@ h1 {
 }
 
 .button-container {
+    padding-top: 25px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -328,6 +338,7 @@ h1 {
     gap: 10px;
     transition: .7s ease;
     top: -600px;
+    z-index: 1;
 }
 
 #form-container.active {
@@ -342,7 +353,7 @@ h1 {
 
 
 small {
-    font: sans-serif; 
+    font: sans-serif;
 }
 
 /* Card Flip */
@@ -359,7 +370,7 @@ small {
     transform-style: preserve-3d;
 }
 
-.flip-card:hover .flip-card-inner {
+.flip-card /*:hover*/ .flip-card-inner {
     transform: rotateY(180deg);
 }
 
@@ -378,5 +389,5 @@ small {
     background-color: transparent;
     transform: rotateY(180deg);
 }
-/* End of Card Flip */
 
+/* End of Card Flip */
