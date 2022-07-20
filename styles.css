@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(to right,#ff0000, #ffd500);
+    background: linear-gradient(to right, #ff0000, #ffd500);
 }
 
 h1 {
@@ -29,7 +29,7 @@ h1 {
 
 /* Front Card*/
 
-.id-container{
+.id-container {
     margin-left: auto;
     padding: 2px;
     font-family: 'Bungee', cursive;
@@ -49,70 +49,16 @@ h1 {
     box-shadow: 7px 9px rgba(0, 0, 0, 0.466);
 } */
 
-.top-layer {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    width: 270px;
-}
-
-.top-layer>img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #ffd500;
-}
-
-.top-layer>div {
-    border-style: solid;
-    border-width: 2px;
-    border-color: #ffd500;
-    padding: 5px 10px;
-    font-size: 20px;
-}
-
-.middle-layer {
-    margin-bottom: 10px;
-    width: 270px;
-}
-
-.middle-layer>img {
-    width: 270px;
-    height: 200px;
-    border-style: solid;
-    border-width: 5px;
-    border-color: #ffd500;
-}
-
-.bottom-layer {
-    border-style: solid;
-    border-width: 5px;
-    border-color: #ffd500;
-    margin: auto 20px 10px 20px;
-    width: 270px;
-}
-
-.bottom-layer>div {
-    text-align: center;
-    padding: 5px 2px;
-    color: #fff;
-}
-
 /* Card Effect */
-
-/* :root {
+:root {
     --color1: rgb(0, 231, 255);
     --color2: rgb(255, 0, 231);
-} */
+}
 
 .trading-card-container {
-    display: flex;
-    height: 483px;
+    height: 520px;
     width: 340px;
+    display: flex;
     flex-direction: column;
     align-items: center;
     border-style: double;
@@ -124,37 +70,26 @@ h1 {
             rgb(255, 163, 182),
             rgb(221, 169, 255),
             rgb(162, 209, 255));
+    box-shadow: 7px 9px rgba(0, 0, 0, 0.466);
+    @media screen and (min-width: 600px);
+    position: relative;
+    overflow: hidden;
+    margin: 20px;
+    overflow: hidden;
+    z-index: 10;
+    touch-action: none;
 
-    @media screen and (min-width: 600px) {
-        width: clamp(12.9vw, 61vh, 18vw);
-        height: clamp(18vw, 85vh, 25.2vw);
+    border-radius: 5% / 3.5%;
+    box-shadow:
+        -5px -5px 5px -5px var(--color1),
+        5px 5px 5px -5px var(--color2),
+        -7px -7px 10px -5px transparent,
+        7px 7px 10px -5px transparent,
+        0 0 5px 0px rgba(255, 255, 255, 0),
+        0 55px 35px -20px rgba(0, 0, 0, 0.5);
 
-
-        position: relative;
-        overflow: hidden;
-        margin: 20px;
-        overflow: hidden;
-        z-index: 10;
-        touch-action: none;
-
-        border-radius: 5% / 3.5%;
-        box-shadow:
-            -5px -5px 5px -5px var(--color1),
-            5px 5px 5px -5px var(--color2),
-            -7px -7px 10px -5px var(--color1),
-            7px 7px 10px -5px var(--color2),
-            0 0 5px 0px rgba(255, 255, 255, 0),
-            0 55px 35px -20px rgba(0, 0, 0, 0.5);
-
-        transition: transform 0.5s ease, box-shadow 0.2s ease;
-        will-change: transform, filter;
-
-        background-color: #040712;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 600px;
-        transform-origin: center;
-    }
+    transition: transform 0.5s ease, box-shadow 0.2s ease;
+    will-change: transform, filter;
 }
 
 .trading-card-container:hover {
@@ -165,23 +100,12 @@ h1 {
         7px 7px 10px -5px var(--color2),
         0 0 13px 4px rgba(255, 255, 255, 0.3),
         0 55px 35px -20px rgba(0, 0, 0, 0.5);
-
-    transition: transform 0.5s ease, box-shadow 0.2s ease;
-    will-change: transform, filter;
-
-    background-color: yellow;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 35%;
-    transform-origin: center;
-
 }
 
-
-/* .trading-card-container:before,
+.trading-card-container:before,
 .trading-card-container:after {
     content: "";
-    position:absolute;
+    position: absolute;
     left: 0;
     right: 0;
     bottom: 0;
@@ -190,12 +114,11 @@ h1 {
     opacity: .5;
     mix-blend-mode: color-dodge;
     transition: all .33s ease;
-} */
+}
 
 .trading-card-container:before {
-    background-position: 35%;
-    background-size: 350px;
-
+    background-position: 50% 50%;
+    background-size: 300% 300%;
     background-image: linear-gradient(115deg,
             transparent 0%,
             var(--color1) 25%,
@@ -206,30 +129,29 @@ h1 {
     opacity: .5;
     filter: brightness(.5) contrast(1);
     z-index: 1;
-} */
+}
 
-/* .trading-card-container:after {
+.trading-card-container:after {
     opacity: 1;
-    background-image: url("https://im3.ezgif.com/tmp/ezgif-3-ba14deb56a.gif"),
+    background-image: url("https://assets.codepen.io/13471/sparkles.gif"),
         url("https://assets.codepen.io/13471/holo.png"),
-        linear-gradient(125deg, #ff008450 15%, #fca40040 35%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
-        background-position: 35%;
-        background-size: 350px;
+        linear-gradient(125deg, #ff008450 15%, #fca40040 30%, #ffff0030 40%, #00ff8a20 60%, #00cfff40 70%, #cc4cfa50 85%);
+    background-position: 50% 50%;
+    background-size: 160%;
     background-blend-mode: overlay;
     z-index: 2;
     filter: brightness(1) contrast(1);
     transition: all .33s ease;
     mix-blend-mode: color-dodge;
     opacity: .75;
+}
 
-} */
-
-/* .trading-card-container.active:after,
+.trading-card-container.active:after,
 .trading-card-container:hover:after {
     filter: brightness(1) contrast(1);
-    
+    ;
     opacity: 1;
-} */
+}
 
 .trading-card-container.active,
 .trading-card-container:hover {
@@ -237,7 +159,7 @@ h1 {
     transition: box-shadow 0.1s ease-out;
 }
 
-/* .trading-card-container.active:before,
+.trading-card-container.active:before,
 .trading-card-container:hover:before {
     animation: none;
     background-image: linear-gradient(110deg,
@@ -245,13 +167,12 @@ h1 {
             var(--color1) 48%,
             var(--color2) 52%,
             transparent 75%);
-    background-position: 35%;
-    background-size: 350px;
-    border-radius: 5px;
+    background-position: 50% 50%;
+    background-size: 250% 250%;
     opacity: .88;
     filter: brightness(.66) contrast(1.33);
     transition: none;
-} */
+}
 
 .trading-card-container.active:before,
 .trading-card-container:hover:before,
@@ -263,20 +184,20 @@ h1 {
 
 .trading-card-container.animated {
     transition: none;
-    animation: holoCard 12s ease 0s 1;}
-    .trading-card-container:before { 
-      transition: none;
-      animation: holoGradient 12s ease 0s 1;
-    }
-    .trading-card-container:after {
-      transition: none;
-      animation: holoSparkle 12s ease 0s 1;
-    }
-  
-/* End of Card Effect */
-=======
-/* End of Test */
+    animation: holoCard 12s ease 0s 1;
+}
 
+:before {
+    transition: none;
+    animation: holoGradient 12s ease 0s 1;
+}
+
+:after {
+    transition: none;
+    animation: holoSparkle 12s ease 0s 1;
+}
+
+/* End of Card Effect */
 
 .top-layer {
     display: flex;
@@ -304,24 +225,6 @@ h1 {
     padding: 5px 10px;
     font-size: 20px;
 }
-
-
-
-.fa-solid {
-    color: rgba(69, 69, 69, 0.55);
-    font-size: 40px;
-}
-
-.fa-solid{
-    color: rgba(69, 69, 69, 0.55);
-    font-size: 40px;
-}
-.fa-solid:hover{
-    cursor: pointer;
-    color: black;
-}
-
-
 
 
 .middle-layer {
@@ -361,7 +264,7 @@ h1 {
     border-color: silver;
     border-width: 20px;
     border-radius: 5%;
-    height: 483px;
+    height: 520px;
     width: 340px;
     background-color: slateblue;
     margin-left: 3px;
@@ -378,7 +281,7 @@ h1 {
     margin-left: 50px;
 }
 
-.card-name{
+.card-name {
     font-family: 'Politician', sans-serif;
     font-size: 25px;
     color: #fff;
@@ -391,26 +294,30 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
 }
-.add-delete-download-button{
+
+.button-container {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 }
+
 .fa-solid {
     color: rgba(69, 69, 69, 0.55);
     font-size: 40px;
 }
 
-.fa-solid{
+.fa-solid {
     color: rgba(69, 69, 69, 0.55);
     font-size: 40px;
 }
-.fa-solid:hover{
+
+.fa-solid:hover {
     cursor: pointer;
     color: black;
 }
 
 /* form container, added some basic styles, but set its top to -600px so you can't see it, but when it has the active class applied to it, it'll use that .7second ease transition to slide down into view */
-#form-container{
+#form-container {
     position: fixed;
     background-color: rgba(240, 248, 255);
     padding: 10px 20px;
@@ -422,11 +329,48 @@ h1 {
     transition: .7s ease;
     top: -600px;
 }
-#form-container.active{
-   top: 100px;
+
+#form-container.active {
+    top: 100px;
 }
-#form-container > form > div > h2{
+
+#form-container>form>div>h2 {
     font-family: 'Bungee Shade', cursive;
     font-size: 20px;
 
 }
+
+/* Card Flip */
+.flip-card {
+    background-color: transparent;
+    height: 520px;
+    width: 340px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    height: 520px;
+    width: 340px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+
+.flip-card-back {
+    background-color: transparent;
+    transform: rotateY(180deg);
+}
+/* End of Card Flip */
