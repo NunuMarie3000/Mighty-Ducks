@@ -5,7 +5,7 @@
             "name": "Michael Curry",
             "image": "./images/michael.png",
             "id": 1,
-            "stats": ["level: intermediate", "XP: 60", "Powers: HTML, CSS, Javascript" ],
+            "stats": ["Level: Intermediate", "XP: 60", "Powers: HTML, CSS, Javascript" ],
             "details": "Michael may seem like other coders, but he’s almost overly dedicated to the work he does. Because of that, this coder excels in his areas of expertise in ways that others don’t."
         },
  
@@ -13,23 +13,23 @@
             "name": "Zion Prater",
             "image": "./images/zion.png",
             "id": 2,
-            "stats": ["level: intermediate", "XP: 40", "Powers: HTML, CSS, Javascript" ],
-            "details": "While this coder may not be the fastest, it has no weaknesses. A jack of all trades, Zion’s work will shock those who overlook him. The quality of this coder’s work can pack a solid punch."
+            "stats": ["Level: Intermediate", "XP: 40", "Powers: HTML, CSS, Javascript" ],
+            "details": "While this coder may not be the fastest, he has no weaknesses. A jack of all trades, Zion’s work will shock those who overlook him. The quality of this coder’s work can pack a solid punch."
         },
  
         {
             "name": "Lindsey Pollan",
             "image": "./images/lindsey.jpg",
-            "stats": ["level: intermediate", "XP: 40", "Powers: HTML, CSS, Javascript"],
+            "stats": ["Level: Intermediate", "XP: 40", "Powers: HTML, CSS, Javascript"],
             "id": 3,
-            "details": "Some say spite is the best motivator, and Lindsey is proof. After being overlooked in the past, this coder is now one of the best there is. her intensity may be intimidating to some, but the work more than makes up for it."
+            "details": "Some say spite is the best motivator, and Lindsey is proof. After being overlooked in the past, this coder is now one of the best there is. Her intensity may be intimidating to some, but the work more than makes up for it."
         },
  
         {
             "name": "Jordan Hobson",
             "image": "./images/jordan.jpg",
             "id": 4,
-            "stats": ["level: intermediate", "XP: 80", "Powers: HTML, CSS, Javascript, Python"],
+            "stats": ["Level: Intermediate", "XP: 80", "Powers: HTML, CSS, Javascript, Python"],
             "details": "A night owl, Jordan works best in the late hours. This is not to say he performs poorly during the day; in fact quite the opposite. The work he does at night increases his performance during the day."
         },
  
@@ -37,7 +37,7 @@
             "name": "Storm O'Bryant",
             "image": "./images/storm-img.png",
             "id": 5,
-            "stats": ["level: intermediate", "XP: 70", "Powers: HTML, CSS, Javascript"],
+            "stats": ["Level: Intermediate", "XP: 70", "Powers: HTML, CSS, Javascript"],
             "details": "Storm is one of the more versatile coders. They can do great work wherever and whenever it’s needed. They are also generally pleasant to be around."
         },
  
@@ -45,7 +45,7 @@
             "name": "Tyler Morgan",
             "image": "./images/tyler.jpg",
             "id": 6,
-            "stats": ["level: intermediate", "XP: 40", "Powers: HTML, CSS, Javascript" ],
+            "stats": ["Level: Intermediate", "XP: 40", "Powers: HTML, CSS, Javascript" ],
             "details": "There aren’t many coders out there like Tyler. This coder has a strong passion for what he does. Due to Tyler's passion, the average coder will pale in comparison."
         },
  
@@ -53,14 +53,14 @@
             "name": "Curtrick Walton",
             "image": "./images/curtrick.png",
             "id": 7,
-            "stats": ["level: intermediate", "XP: 50", "Powers: HTML, CSS, Javascript"],
+            "stats": ["Level: Intermediate", "XP: 50", "Powers: HTML, CSS, Javascript"],
             "details": "Many coders have an affinity for one language, even if they know many. Curtrick is an exception. This coder stands out among others in several areas and languages."
         },
  
         {
             "name": "Robert Armstrong",
             "image": "./images/robert.jpg",
-            "stats": ["level: expert", "XP: 140", "Powers: HTML, CSS, Javascript"],
+            "stats": ["Level: Expert", "XP: 140", "Powers: HTML, CSS, Javascript"],
             "id": 8,
             "details": "There is not much known about Robert outside his ability to write stellar code. He prefers to let the work speak for itself, and the work certainly does speak for itself."
         },
@@ -68,9 +68,9 @@
         {
             "name": "Lizzy Rhodes",
             "image": "./images/lizzy.jpg",
-            "stats": ["level: expert", "XP: 230", "Powers: HTML, CSS, Javascript"],
+            "stats": ["Level: Expert", "XP: 230", "Powers: HTML, CSS, Javascript"],
             "id": 9,
-            "details": "This coder has a lot of experience behind its belt. Because of this, Lizzy can hold her own against some of the best and most intimidating coders. She has also learned to code for long periods of time without burnout."
+            "details": "This coder has a lot of experience behind her belt. Because of this, Lizzy can hold her own against some of the best and most intimidating coders. She has also learned to code for long periods of time without burnout."
         }
  
     ]

@@ -27,17 +27,17 @@
         <div id="form-container">
             <form id="add-new-coder-form" action="./app.js" method="get">
                 <div class="greetings-container">
-                    <h2>Add Your Own Coder Trading Card!</h2>
+                    <h2>Add Your Own Coder Trading Card!</h2> <!--add placeholder to input in this section-->
                 </div>
 
                 <div class="fname-input-container">
                     <label for="add-fname">First Name: </label><br>
-                    <input id="add-fname" type="text" name="add-fname" required>
+                    <input id="add-fname" type="text" name="add-fname" placeholder="John" required>
                 </div><br>
 
                 <div class="lname-input-container">
                     <label for="add-lname">Last Name: </label><br>
-                    <input id="add-lname" type="text" name="add-lname" required>
+                    <input id="add-lname" type="text" name="add-lname" placeholder="Doe" required>
                 </div><br>
 
                 <div class="image-input-container">
@@ -56,17 +56,20 @@
 
                 <div class="xp-input-container">
                     <label for="add-xp">XP: </label><br>
-                    <input id="add-xp" type="number" name="add-xp" required>
+                    <input id="add-xp" type="number" name="add-xp" placeholder="410" required> 
+                    <small>Format: 100 xp per year; 10xp per month</small> 
                 </div><br>
 
                 <div class="powers-input-container">
                     <label for="powers">Powers: </label>
-                    <input type="text" id="powers" name="powers" required>
+                    <input type="text" id="powers" name="powers" placeholder="Pick best coding languages" required> 
+                    <small>Format: language, language, language (max: 3; min: 1)</small>
                 </div><br>
 
                 <div class="details-input-container">
                     <label for="add-details">Details: </label>
-                    <input type="text" id="add-details" name="add-details" required><br>
+                    <input type="text" id="add-details" name="add-details" placeholder="Lorem ipsum dolor sit amet." required>
+                    <small>Format: 1-3 sentences about yourself. Get creative!</small>
                 </div><br>
 
                 <div class="submit-container">

@@ -430,3 +430,7 @@ h1 {
     font-size: 20px;
 
 }
+
+small {
+    font: sans-serif; 
+}
