@@ -162,6 +162,13 @@ addButton.addEventListener('click', ()=>{
     formContainer.classList.toggle('active');
 });
 
+let closeButton = document.getElementById('close');
+
+closeButton.addEventListener('click', ()=>{
+    formContainer.classList.remove('active');
+});
+
+
 // window.addEventListener('load', ()=>{
 //     getCoderCardsFromLocalsStorage();
 //     console.log(newlyCreatedCoderCardsArray);
