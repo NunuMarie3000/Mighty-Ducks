@@ -323,12 +323,18 @@ h1 {
     padding: 10px 20px;
     border-radius: 5%;
     display: flex;
+    z-index: 1;
     flex-direction: column;
     align-content: center;
     gap: 10px;
     transition: .7s ease;
     top: -600px;
     z-index: 1;
+}
+
+form>div>span {
+    cursor: pointer;
+    font-size: 25px;
 }
 
 #form-container.active {
@@ -338,12 +344,15 @@ h1 {
 #form-container>form>div>h2 {
     font-family: 'Bungee Shade', cursive;
     font-size: 20px;
-
 }
 
 
-small {
-    font: sans-serif; 
+form>div>small {
+    font-family: sans-serif; 
+}
+
+form>div>label {
+    font-family: sans-serif; 
 }
 
 /* Card Flip */
