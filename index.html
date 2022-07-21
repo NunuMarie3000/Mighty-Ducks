@@ -26,8 +26,9 @@
         <!-- create a form here that shows up when the user clicks the add button -->
         <div id="form-container">
             <form id="add-new-coder-form" action="./app.js" method="get">
+
                 <div class="greetings-container">
-                    <h2>Add Your Own Coder Trading Card!</h2> <!--add placeholder to input in this section-->
+                    <h2>Add Your Own Coder Trading Card!</h2>     
                 </div>
 
                 <div class="fname-input-container">
@@ -75,6 +76,10 @@
                 <div class="submit-container">
                     <input type="submit" name="submit" id="submit-button">
                 </div>
+                <div class="close-container">
+                    <span id="close">x</span>
+                </div>
+
 
       </form>
     </div>
@@ -95,10 +100,10 @@
         </div>
 
 
-        <div class="flip-card">
-          <div class="flip-card-inner">
+        <div id="flip-card" class="flip-card">
+          <div id="flip-card-inner" class="flip-card-inner">
             <div class="flip-card-front">
-              <div class="back-card-container">
+              <div id="back-card-container" class="back-card-container">
                 <div class="back-middle">
                   <!-- &nbsp -(non-breaking space) extended HTML character -->
                   <div class="card-name">&nbsp&nbspCarousel of &nbsp&nbsp&nbsp&nbsp&nbspCoders</div>
@@ -107,7 +112,7 @@
                 </div>
               </div>
             </div>
-            <div class="flip-card-back">
+            <div id="flip-card-back" class="flip-card-back">
               <!-- trading card container will be our trading card -->
               <div id="trading-card" class="trading-card-container">
                 <div class="id-container">
