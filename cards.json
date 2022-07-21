@@ -11,7 +11,7 @@
  
         {
             "name": "Zion Prater",
-            "image": "./images/zion.png",
+            "image": "./images/zion.jpg",
             "id": 2,
             "stats": ["Level: Intermediate", "XP: 40", "Powers: HTML, CSS, Javascript" ],
             "details": "While this coder may not be the fastest, he has no weaknesses. A jack of all trades, Zion’s work will shock those who overlook him. The quality of this coder’s work can pack a solid punch."
@@ -43,7 +43,7 @@
  
         {
             "name": "Tyler Morgan",
-            "image": "./images/tyler.jpg",
+            "image": "./images/tyler.png",
             "id": 6,
             "stats": ["Level: Intermediate", "XP: 40", "Powers: HTML, CSS, Javascript" ],
             "details": "There aren’t many coders out there like Tyler. This coder has a strong passion for what he does. Due to Tyler's passion, the average coder will pale in comparison."
@@ -51,7 +51,7 @@
  
         {
             "name": "Curtrick Walton",
-            "image": "./images/curtrick.png",
+            "image": "./images/curtrick.jpg",
             "id": 7,
             "stats": ["Level: Intermediate", "XP: 50", "Powers: HTML, CSS, Javascript"],
             "details": "Many coders have an affinity for one language, even if they know many. Curtrick is an exception. This coder stands out among others in several areas and languages."

@@ -81,10 +81,10 @@ let rewindThroughCards = ()=>{
     populate(currentCoderCard);
 }
 
-//NOTE: Buggy since merging css changes
-//we can use the html2canvas method to take a screenshot of a div
+let outputContainer = document.getElementById('output-container');
+//we can use the html2canvas method to take a "screenshot" of a div
 let downloadCards = ()=>{
-    // Use the html2canvas function to take a screenshot and append it to the output div
+    //Use the html2canvas function to take a screenshot and append it to the output div
     html2canvas(document.getElementById('trading-card')).then((canvas)=>{
         document.getElementById('output').appendChild(canvas);
     });
@@ -130,7 +130,7 @@ let deleteFromLocalStorage = ()=>{
         }
         if(newlyCreatedCoderCardsArray.length === 1){
             newlyCreatedCoderCardsArray.splice(0, 1);
-            localStorage.setItem('new cards', JSON.stringify(newlyCreatedCoderCardsArray));
+            localStorage.clear();
         }
         localStorage.setItem('new cards', JSON.stringify(newlyCreatedCoderCardsArray));
     });
@@ -196,12 +196,17 @@ forwardButton.addEventListener('click', skipThroughCards);
 
 backwardButton.addEventListener('click', rewindThroughCards);
 
-downloadButton.addEventListener('click', downloadCards);
+downloadButton.addEventListener('click', ()=>{
+    outputContainer.classList.add('helpful-info');
+    downloadCards();
+});
 
 //add event listener to output container so it gets rid of the screenshot pic on mouseleave event
 let printMe = document.getElementById('output');
-printMe.addEventListener('mouseleave', ()=>{
+
+printMe.addEventListener('click', ()=>{
     printMe.textContent = '';
+    outputContainer.classList.remove('helpful-info');
 });
 
 deleteButton.addEventListener('click', ()=>{
