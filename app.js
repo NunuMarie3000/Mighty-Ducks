@@ -81,13 +81,13 @@ let rewindThroughCards = ()=>{
 }
 
 //NOTE: Buggy since merging css changes
-// //we can use the html2canvas method to take a screenshot of a div
-// let downloadCards = ()=>{
-//     // Use the html2canvas function to take a screenshot and append it to the output div
-//     html2canvas(document.getElementById('trading-card')).then((canvas)=>{
-//         document.getElementById('output').appendChild(canvas);
-//     });
-// };
+//we can use the html2canvas method to take a screenshot of a div
+let downloadCards = ()=>{
+    // Use the html2canvas function to take a screenshot and append it to the output div
+    html2canvas(document.getElementById('trading-card')).then((canvas)=>{
+        document.getElementById('output').appendChild(canvas);
+    });
+};
 
 //NOTE: Attempt at opening image screenshot in new window since previous ^ is buggy
 // let screenshot = () =>{
@@ -191,8 +191,8 @@ forwardButton.addEventListener('click', skipThroughCards);
 
 backwardButton.addEventListener('click', rewindThroughCards);
 
-// downloadButton.addEventListener('click', downloadCards);
-downloadButton.addEventListener('click', screenshot);
+downloadButton.addEventListener('click', downloadCards);
+// downloadButton.addEventListener('click', screenshot);
 
 //add event listener to output container so it gets rid of the screenshot pic on mouseleave event
 let printMe = document.getElementById('output');
