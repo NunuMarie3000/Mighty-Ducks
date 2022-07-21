@@ -23,9 +23,6 @@ let addButton = document.getElementById('add-button');
 //create array to hold all trading card coder objects
 let coderCardsArray = [];
 
-//new Array for newly created objects so i can put them/get them out of local storage easier
-let newlyCreatedCoderCardsArray = [];
-
 //instead, use form data that user inputs, pass it into a constructor class and push all newly created class instances into an array
 //we can then iterate through that array and populate the cards that way
 let getJsonCards = fetch('./cards.json').then((response)=>{
@@ -54,14 +51,14 @@ let skipThroughCards = ()=>{
     //set currentCoderCard to the coderCardsArray[with the index value of whatever the index counter is on at the moment]
     let currentCoderCard = coderCardsArray[counter];
 
-    // if(counter === 1){
-    //     counter = 1;
-    // }
-    //if the we're at the end of the array, set indexcounter to 0 so we loop through again
     if(counter === coderCardsArray.length){
         counter = 0;
     }
     populate(currentCoderCard);
+
+    if(counter == null){
+        counter++;
+    }
 
     //add 1 to the index counter, moving on to the next codercard object in the coderCardsArray
     //this will be done at the end of this function so it populates then adds whenever i call it
@@ -72,6 +69,10 @@ let rewindThroughCards = ()=>{
     counter--;
 
     let currentCoderCard = coderCardsArray[counter];
+
+    if(counter == null){
+        counter--;
+    }
 
     if(counter === 0){
         counter = coderCardsArray.length;
@@ -89,16 +90,6 @@ let downloadCards = ()=>{
     });
 };
 
-//NOTE: Attempt at opening image screenshot in new window since previous ^ is buggy
-// let screenshot = () =>{
-//     html2canvas(document.getElementById('trading-card')).then((canvas) => {
-//         let screenshotURL = canvas.toDataURL("image/png");
-//         console.log(screenshotURL);
-//         window.open(screenshotURL, '_blank');
-//     });
-// }
-  
-
 //class
 class coderCards {
     constructor(firstName, lastName, image, level, xp, powers, details){
@@ -112,35 +103,49 @@ class coderCards {
         setTimeout(()=>{
             coderCardsArray.push(this);
             newlyCreatedCoderCardsArray.push(this);
-            if (!localStorage.key('newCards')){
-                localStorage.setItem('newCards', `${JSON.stringify(newlyCreatedCoderCardsArray)}`);
-            }
-            if(localStorage.key('newCards')){
-                let storedCards = JSON.parse(localStorage.getItem('newCards'));
-                console.log(storedCards);
-                console.log(newlyCreatedCoderCardsArray);
-                newlyCreatedCoderCardsArray = [];
-                console.log(newlyCreatedCoderCardsArray);
-                storedCards.forEach(obj => {
-                    newlyCreatedCoderCardsArray.push(obj);
-                });
-                console.log(newlyCreatedCoderCardsArray);
-                localStorage.setItem('newCards', `${JSON.stringify(newlyCreatedCoderCardsArray)}`);
-            }
+            addToLocalStorage();
         }, 50);
     }
+}
+let newlyCreatedCoderCardsArray = [];
+
+let addToLocalStorage = ()=>{
+    //first, if local storage is empty
+    if(!localStorage.key('new cards')){
+        localStorage.setItem('new cards', JSON.stringify(newlyCreatedCoderCardsArray));
+    }
+    //if not empty
+    else if(localStorage.key('new cards')){
+        localStorage.setItem('new cards', JSON.stringify(newlyCreatedCoderCardsArray));
+    }
+}
+
+let deleteFromLocalStorage = ()=>{
+    newlyCreatedCoderCardsArray.forEach(obj =>{
+        let indexNumNewly = obj.id - 10;
+        let indexNumCoder = obj.id - 1;
+        if(obj.name === userName.textContent){
+            newlyCreatedCoderCardsArray.splice(indexNumNewly, 1);
+            coderCardsArray.splice(indexNumCoder, 1);
+        }
+        if(newlyCreatedCoderCardsArray.length === 1){
+            newlyCreatedCoderCardsArray.splice(0, 1);
+            localStorage.setItem('new cards', JSON.stringify(newlyCreatedCoderCardsArray));
+        }
+        localStorage.setItem('new cards', JSON.stringify(newlyCreatedCoderCardsArray));
+    });
 }
 
 //create function to get local storage cards
 let getCoderCardsFromLocalsStorage = ()=>{
-    let localStorageCards = JSON.parse(localStorage.getItem('newCards'));
+    let localStorageCards = JSON.parse(localStorage.getItem('new cards'));
     localStorageCards.forEach(item =>{
         newlyCreatedCoderCardsArray.push(item);
         coderCardsArray.push(item);
     });
 }
 setTimeout(()=>{
-    if(!localStorage.key('newCards')){
+    if(!localStorage.key('new cards')){
         console.log('nothing in local storage');
     }else{
         getCoderCardsFromLocalsStorage();
@@ -179,13 +184,6 @@ closeButton.addEventListener('click', ()=>{
     formContainer.classList.remove('active');
 });
 
-
-// window.addEventListener('load', ()=>{
-//     getCoderCardsFromLocalsStorage();
-//     console.log(newlyCreatedCoderCardsArray);
-//     populate(newlyCreatedCoderCardsArray);
-// });
-
 //add event listener to backofcard and front of card to flip when clicked
 let flipCardInner = document.getElementById('flip-card-inner');
 let backCardContainer = document.getElementById('back-card-container');
@@ -199,7 +197,6 @@ forwardButton.addEventListener('click', skipThroughCards);
 backwardButton.addEventListener('click', rewindThroughCards);
 
 downloadButton.addEventListener('click', downloadCards);
-// downloadButton.addEventListener('click', screenshot);
 
 //add event listener to output container so it gets rid of the screenshot pic on mouseleave event
 let printMe = document.getElementById('output');
@@ -207,4 +204,6 @@ printMe.addEventListener('mouseleave', ()=>{
     printMe.textContent = '';
 });
 
-// deleteButton.addEventListener('click', );
+deleteButton.addEventListener('click', ()=>{
+    deleteFromLocalStorage();
+});
