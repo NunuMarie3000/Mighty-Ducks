@@ -80,7 +80,6 @@ h1 {
     position: relative;
     overflow: hidden;
     margin: 20px;
-    overflow: hidden;
     z-index: 10;
     touch-action: none;
 
@@ -287,14 +286,18 @@ h1 {
 .back-middle>img {
     margin-top: 60px;
     width: 150px;
-    margin-left: 50px;
+    margin-left: 59px;
 }
 
 .card-name {
     font-family: 'Politician', sans-serif;
+    flex-direction: column;
+    align-items: center;
     font-size: 25px;
     color: #fff;
     margin-top: 25%;
+    margin-left: 20%;
+    background-image: radial-gradient(85deg, slateblue, rebeccapurple);
 }
 
 /* Buttons */
