@@ -26,155 +26,66 @@
     <!--main container that'll hold everything in our application
     this container will also be where we have our front and back arrow buttons/icons-->
   <div class="main-container">
-
-
-        <!-- create a form here that shows up when the user clicks the add button -->
-        <div id="form-container">
-            <form id="add-new-coder-form" action="./app.js" method="get">
-
-                <div class="greetings-container">
-                    <h2>Add Your Own Coder Trading Card!</h2>     
-                </div>
-                
-                <div class="close-container">
-                    <span id="close">x</span>
-                </div>
-
-                <div class="fname-input-container">
-                    <label for="add-fname">First Name: </label><br>
-                    <input id="add-fname" type="text" name="add-fname" placeholder="John" required>
-                </div><br>
-
-                <div class="lname-input-container">
-                    <label for="add-lname">Last Name: </label><br>
-                    <input id="add-lname" type="text" name="add-lname" placeholder="Doe" required>
-                </div><br>
-
-                <div class="image-input-container">
-                    <label for="add-image">Image Address URL: </label><br>
-                    <input id="add-image" type="url" name="add-image" required>
-                </div><br>
-
-                <div class="level-input-container">
-                    <label for="level">Level:</label><br>
-                    <select name="level" id="level" required>
-                        <option value="beginner">Beginner</option>
-                        <option value="intermediate">Intermediate</option>
-                        <option value="expert">Expert</option>
-                    </select>    
-                </div><br>
-
-                <div class="xp-input-container">
-                    <label for="add-xp">XP: </label><br>
-                    <input id="add-xp" type="number" name="add-xp" placeholder="410" required> 
-                    <small>Format: 100 xp per year; 10xp per month</small> 
-                </div><br>
-
-                <div class="powers-input-container">
-                    <label for="powers">Powers: </label>
-                    <input type="text" id="powers" name="powers" placeholder="Pick best coding languages" required> 
-                    <small>Format: language, language, language (max: 3; min: 1)</small>
-                </div><br>
-
-                <div class="details-input-container">
-                    <label for="add-details">Details: </label>
-                    <input type="text" id="add-details" name="add-details" placeholder="Lorem ipsum dolor sit amet." required>
-                    <small>Format: 1-3 sentences about yourself. Get creative!</small>
-                </div><br>
-
-                <div class="submit-container">
-                    <input type="submit" name="submit" id="submit-button">
-                </div>
-                
-
+    <!-- create a form here that shows up when the user clicks the add button -->
+    <div id="form-container">
+        <form id="add-new-coder-form" action="./app.js" method="get">
+          <div class="greetings-container">
+              <h2>Add Your Own Coder Trading Card!</h2>     
+          </div>
 
           <div class="fname-input-container">
-            <label for="add-fname">First Name: </label><br />
-            <input
-              id="add-fname"
-              type="text"
-              name="add-fname"
-              placeholder="John"
-              required
-            />
-          </div>
-          <br />
+              <label for="add-fname">First Name: </label><br>
+              <input id="add-fname" type="text" name="add-fname" placeholder="John" required>
+          </div><br>
 
           <div class="lname-input-container">
-            <label for="add-lname">Last Name: </label><br />
-            <input
-              id="add-lname"
-              type="text"
-              name="add-lname"
-              placeholder="Doe"
-              required
-            />
-          </div>
-          <br />
+              <label for="add-lname">Last Name: </label><br>
+              <input id="add-lname" type="text" name="add-lname" placeholder="Doe" required>
+          </div><br>
 
           <div class="image-input-container">
-            <label for="add-image">Image Address URL: </label><br />
-            <input id="add-image" type="url" name="add-image" required />
-          </div>
-          <br />
+              <label for="add-image">Image Address URL: </label><br>
+              <input id="add-image" type="url" name="add-image" required>
+          </div><br>
 
           <div class="level-input-container">
-            <label for="level">Level:</label><br />
-            <select name="level" id="level" required>
-              <option value="beginner">Beginner</option>
-              <option value="intermediate">Intermediate</option>
-              <option value="expert">Expert</option>
-            </select>
-          </div>
-          <br />
+              <label for="level">Level:</label><br>
+              <select name="level" id="level" required>
+                  <option value="beginner">Beginner</option>
+                  <option value="intermediate">Intermediate</option>
+                  <option value="expert">Expert</option>
+              </select>    
+          </div><br>
 
           <div class="xp-input-container">
-            <label for="add-xp">XP: </label><br />
-            <input
-              id="add-xp"
-              type="number"
-              name="add-xp"
-              placeholder="410"
-              required
-            />
-            <small>Format: 100 xp per year; 10xp per month</small>
-          </div>
-          <br />
+              <label for="add-xp">XP: </label><br>
+              <input id="add-xp" type="number" name="add-xp" placeholder="410" required> <br>
+              <small>Format: 100 xp per year; 10xp per month</small> 
+          </div><br>
 
           <div class="powers-input-container">
-            <label for="powers">Powers: </label>
-            <input
-              type="text"
-              id="powers"
-              name="powers"
-              placeholder="Pick best coding languages"
-              required
-            />
-            <small>Format: language, language, language (max: 3; min: 1)</small>
-          </div>
-          <br />
+              <label for="powers">Powers: </label>
+              <input type="text" id="powers" name="powers" placeholder="Pick best coding languages" required> <br>
+              <small>Format: language, language, language (max: 3; min: 1)</small>
+          </div><br>
 
           <div class="details-input-container">
-            <label for="add-details">Details: </label>
-            <input
-              type="text"
-              id="add-details"
-              name="add-details"
-              placeholder="Lorem ipsum dolor sit amet."
-              required
-            />
-            <small>Format: 1-3 sentences about yourself. Get creative!</small>
-          </div>
-          <br />
+              <label for="add-details">Details: </label>
+              <input type="text" id="add-details" name="add-details" placeholder="Lorem ipsum dolor sit amet." required><br>
+              <small>Format: 1-3 sentences about yourself. Get creative!</small>
+          </div><br>
 
-          <div class="submit-container">
-            <input type="submit" name="submit" id="submit-button" />
+          <div class="submit-and-close">
+            <div class="submit-container">
+              <i id="submit" class="fa-solid fa-circle-check"></i>
           </div>
+
           <div class="close-container">
-            <span id="close">x</span>
+            <i id="close" class="fa-solid fa-circle-xmark"></i>
           </div>
-        </form>
-      </div>
+          </div>
+        </form>  
+    </div>
 
       <!--this container will be where our trading card, title, and footer will live-->
       <div class="sub-container">

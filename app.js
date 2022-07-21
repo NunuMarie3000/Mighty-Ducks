@@ -166,7 +166,8 @@ let createNewCoderCard = ()=>{
     new coderCards(fName, lName, image, level, xp, powers, details);
 }
 
-newCoderForm.addEventListener('submit', (e)=>{
+let submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', (e)=>{
     e.preventDefault();
     createNewCoderCard();
     newCoderForm.reset();
