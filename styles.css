@@ -293,11 +293,11 @@ h1 {
     font-family: 'Politician', sans-serif;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-size: 25px;
     color: #fff;
     margin-top: 25%;
     margin-left: 20%;
-    background-image: radial-gradient(85deg, slateblue, rebeccapurple);
 }
 
 /* Buttons */
@@ -348,6 +348,8 @@ h1 {
 form>div>span {
     cursor: pointer;
     font-size: 25px;
+    display: block; /*lets me move the close button*/
+    text-align: right;
 }
 
 #form-container.active {
@@ -358,8 +360,6 @@ form>div>span {
     font-family: 'Bungee Shade', cursive;
     font-size: 20px;
 }
-
-
 
 form>div>small {
     font-family: sans-serif; 
