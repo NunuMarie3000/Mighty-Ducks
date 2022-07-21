@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font awesome so we have access to icons from font awesome library -->
+    <script
+      src="https://kit.fontawesome.com/3a9f60b233.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <link href="http://fonts.cdnfonts.com/css/politician" rel="stylesheet" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- font awesome so we have access to icons from font awesome library -->
-  <script src="https://kit.fontawesome.com/3a9f60b233.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&display=swap" rel="stylesheet">
-  <link href="http://fonts.cdnfonts.com/css/politician" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Home</title>
+  </head>
 
-  <link rel="stylesheet" href="styles.css">
-  <title>Home</title>
-</head>
-
-<body>
-  <!--main container that'll hold everything in our application
+  <body>
+    <!--main container that'll hold everything in our application
     this container will also be where we have our front and back arrow buttons/icons-->
   <div class="main-container">
 
@@ -83,91 +88,184 @@
                 
 
 
-      </form>
-    </div>
+          <div class="fname-input-container">
+            <label for="add-fname">First Name: </label><br />
+            <input
+              id="add-fname"
+              type="text"
+              name="add-fname"
+              placeholder="John"
+              required
+            />
+          </div>
+          <br />
 
-    <!--this container will be where our trading card, title, and footer will live-->
-    <div class="sub-container">
+          <div class="lname-input-container">
+            <label for="add-lname">Last Name: </label><br />
+            <input
+              id="add-lname"
+              type="text"
+              name="add-lname"
+              placeholder="Doe"
+              required
+            />
+          </div>
+          <br />
 
-      <div class="title">
-        <h1>Carousel of Coders ft. Code 201 2022</h1>
+          <div class="image-input-container">
+            <label for="add-image">Image Address URL: </label><br />
+            <input id="add-image" type="url" name="add-image" required />
+          </div>
+          <br />
+
+          <div class="level-input-container">
+            <label for="level">Level:</label><br />
+            <select name="level" id="level" required>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="expert">Expert</option>
+            </select>
+          </div>
+          <br />
+
+          <div class="xp-input-container">
+            <label for="add-xp">XP: </label><br />
+            <input
+              id="add-xp"
+              type="number"
+              name="add-xp"
+              placeholder="410"
+              required
+            />
+            <small>Format: 100 xp per year; 10xp per month</small>
+          </div>
+          <br />
+
+          <div class="powers-input-container">
+            <label for="powers">Powers: </label>
+            <input
+              type="text"
+              id="powers"
+              name="powers"
+              placeholder="Pick best coding languages"
+              required
+            />
+            <small>Format: language, language, language (max: 3; min: 1)</small>
+          </div>
+          <br />
+
+          <div class="details-input-container">
+            <label for="add-details">Details: </label>
+            <input
+              type="text"
+              id="add-details"
+              name="add-details"
+              placeholder="Lorem ipsum dolor sit amet."
+              required
+            />
+            <small>Format: 1-3 sentences about yourself. Get creative!</small>
+          </div>
+          <br />
+
+          <div class="submit-container">
+            <input type="submit" name="submit" id="submit-button" />
+          </div>
+          <div class="close-container">
+            <span id="close">x</span>
+          </div>
+        </form>
       </div>
 
-      <!-- container for trading card and forward/backward button/icon -->
-      <div class="forward-backward-trading-card-holder-container">
-
-        <!-- back icon -->
-        <div class="backward-container">
-          <i id="back-button" class="fa-solid fa-backward"></i>
+      <!--this container will be where our trading card, title, and footer will live-->
+      <div class="sub-container">
+        <div class="title">
+          <h1>Carousel of Coders ft. Code 201 2022</h1>
         </div>
 
+        <!-- container for trading card and forward/backward button/icon -->
+        <div class="forward-backward-trading-card-holder-container">
+          <!-- back icon -->
+          <div class="backward-container">
+            <i id="back-button" class="fa-solid fa-backward"></i>
+          </div>
 
-        <div id="flip-card" class="flip-card">
-          <div id="flip-card-inner" class="flip-card-inner">
-            <div class="flip-card-front">
-              <div id="back-card-container" class="back-card-container">
-                <div class="back-middle">
-                  <!-- &nbsp -(non-breaking space) extended HTML character -->
-                  <div class="card-name">Carousel<br> of<br> Coders</div>
-                  <img src="./img/code_crew.png" alt="" class="coder-pic">
-                </div>
-              </div>
-            </div>
-            <div id="flip-card-back" class="flip-card-back">
-              <!-- trading card container will be our trading card -->
-              <div id="trading-card" class="trading-card-container">
-                <div class="id-container">
-                  <span id="id-number">0</span>
-                </div>
-                <div class="top-layer">
-                  <img src='./img/code_crew.png' alt="" class="logo-pic">
-                  <div class="username-box">
-                    <h3 id="userName">Meka Egwuekwe</h3>
+          <div id="flip-card" class="flip-card">
+            <div id="flip-card-inner" class="flip-card-inner">
+              <div class="flip-card-front">
+                <div id="back-card-container" class="back-card-container">
+                  <div class="back-middle">
+                    <!-- &nbsp -(non-breaking space) extended HTML character -->
+                    <div class="card-name">
+                      Carousel<br />
+                      of<br />
+                      Coders
+                    </div>
+                    <img src="./img/code_crew.png" alt="" class="coder-pic" />
                   </div>
                 </div>
+              </div>
+              <div id="flip-card-back" class="flip-card-back">
+                <!-- trading card container will be our trading card -->
+                <div id="trading-card" class="trading-card-container">
+                  <div class="id-container">
+                    <span id="id-number">0</span>
+                  </div>
+                  <div class="top-layer">
+                    <img src="./img/code_crew.png" alt="" class="logo-pic" />
+                    <div class="username-box">
+                      <h3 id="userName">Meka Egwuekwe</h3>
+                    </div>
+                  </div>
 
-                <div class="middle-layer">
-                  <img id="coder-pic" src="./img/meka-headshot.jpg" alt="" class="coder-pic">
-                </div>
+                  <div class="middle-layer">
+                    <img
+                      id="coder-pic"
+                      src="./img/meka-headshot.jpg"
+                      alt=""
+                      class="coder-pic"
+                    />
+                  </div>
 
-                <div class="bottom-layer">
-                  <div class="details-container">
-                    <p id="stats">Stats: Executive Director of Code Crew </p>
-                    <p id="details">I love Coding!</p>
+                  <div class="bottom-layer">
+                    <div class="details-container">
+                      <p id="stats">Stats: Executive Director of Code Crew</p>
+                      <p id="details">I love Coding!</p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
 
-
-        <!-- forward icon -->
-        <div class="forward-container">
-          <i id="skip-button" class="fa-solid fa-forward"></i>
+          <!-- forward icon -->
+          <div class="forward-container">
+            <i id="skip-button" class="fa-solid fa-forward"></i>
+          </div>
         </div>
       </div>
+    </div>
+    <div class="button-container">
+      <!-- add icon -->
+      <div class="add">
+        <i id="add-button" class="fa-solid fa-plus"></i>
+      </div>
+      <!-- delete icon -->
+      <div class="delete">
+        <i id="delete-button" class="fa-solid fa-trash"></i>
+      </div>
+      <!-- download icon -->
+      <div class="download">
+        <i id="download-button" class="fa-solid fa-download"></i>
+      </div>
+    </div>
+    
+    <div id="output-container">
+      <h3>Right Click to Close, <br>Left Click to Save!</h3>
       <div id="output"></div>
     </div>
-  </div>
-  <div class="button-container">
-    <!-- add icon -->
-    <div class="add">
-      <i id="add-button" class="fa-solid fa-plus"></i>
-    </div>
-    <!-- delete icon -->
-    <div class="delete">
-      <i id="delete-button" class="fa-solid fa-trash"></i>
-    </div>
-    <!-- download icon -->
-    <div class="download">
-      <i id="download-button" class="fa-solid fa-download"></i>
-    </div>
-  </div>
-  <!-- <a href="#" ;
-  newWindow.print();">Print Image</a> -->
-  <footer>&copy; Mighty Ducks, 2022</footer>
-  <script src="./app.js"></script>
-</body>
 
+    <footer>&copy; Mighty Ducks, 2022</footer>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
